@@ -1,0 +1,147 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jpl.goodfood.MenuActivity"
+    android:background="#addd000b">
+
+    <!--Background image with proper scaling-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/pasta4"
+        android:scaleType="centerCrop"/>
+
+        <!--Header Action bar-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="30sp"
+                android:textColor="#ffffff"
+                android:text="Good Food"
+                android:id="@+id/menu_headerTitle"/>
+
+            <ImageView
+                android:layout_width="47dp"
+                android:layout_height="47dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/bag_gray"
+                android:id="@+id/menu_headerBag"/>
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:dividerHeight="10dp"/>
+
+        <View
+            android:id="@+id/touch_interceptor_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--Expanded view layout-->
+        <RelativeLayout
+            android:id="@+id/details_layout"
+            android:background="@color/tw__solid_white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="150dp"
+                android:src="@drawable/pasta"
+                android:id="@+id/menu_menuImage"/>
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="1"
+                android:textColor="#ff3d3c40"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:id="@+id/menu_orderItemQty"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="IBM EGL - C"
+                android:textColor="#ff3d3c40"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="35dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/menu_location"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" ORDER"
+                android:textSize="20sp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="30dp"
+                android:id="@+id/menu_order"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="\u20B9 50"
+                android:textColor="#ff3d3c40"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="25dp"
+                android:layout_above="@id/menu_order"
+                android:id="@+id/menu_menuPrice"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#ff77767b"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginBottom="25dp"
+                android:text="2 roti + rice + 2 curry + papad"
+                android:layout_above="@id/menu_location"
+                android:id="@+id/menu_menuDetail"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textColor="#ff0084ff"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="5dp"
+                android:text="Full Meals"
+                android:layout_above="@id/menu_menuDetail"
+                android:id="@+id/menu_menuName"/>
+
+        </RelativeLayout>
+
+        <com.alexvasilkov.foldablelayout.UnfoldableView
+            android:id="@+id/unfoldable_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+</FrameLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    swipe:leftEdgeSwipeOffset="0dp"
+    swipe:rightEdgeSwipeOffset="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#FF5534"
+        android:gravity="center"
+        android:tag="Bottom3"
+        android:weightSum="10">
+
+        <ImageView
+            android:id="@+id/trash"
+            android:layout_width="27dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/trashcan" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="Cancel Order?"
+            android:textColor="#fff"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/order_delete"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="4"
+            android:background="#ffffff"
+            android:text="YES, CANCEL"
+            android:textColor="#c8ff5534"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#c8ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textSize="30sp"
+            android:textColor="#ff525155"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:id="@+id/order_orderQty"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Meals (Roti)"
+            android:textSize="25sp"
+            android:textColor="#ff0084ff"
+            android:layout_toRightOf="@id/order_orderQty"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/order_orderName"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 Roti + 2 curry + Rice + Papad"
+            android:textSize="15sp"
+            android:textColor="#ff77767b"
+            android:layout_toRightOf="@id/order_orderQty"
+            android:layout_below="@id/order_orderName"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="12dp"
+            android:id="@+id/order_orderDetail"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EGL - IBM - C"
+            android:textSize="20sp"
+            android:textColor="#ff525155"
+            android:layout_toRightOf="@id/order_orderQty"
+            android:layout_below="@id/order_orderDetail"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/order_orderLocation"/>
+
+        <!--<com.joooonho.SelectableRoundedImageView-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:id="@+id/order_cancel"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--app:sriv_right_top_corner_radius="4dp"-->
+            <!--app:sriv_right_bottom_corner_radius="4dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:src="@drawable/close"/>-->
+    </RelativeLayout>
+
+</com.daimajia.swipe.SwipeLayout>
